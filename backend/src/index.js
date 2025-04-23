@@ -27,10 +27,11 @@ const httpServer = createServer(app);
 initializeSocket(httpServer);
 
 app.use(
-    cors({
-        origin: "*",
-        credentials: true,
-    })
+    // cors({
+    //     origin: "*",
+    //     credentials: true,
+    // })
+    cors()
 );
 
 app.use(express.json());
